@@ -1,0 +1,10 @@
+FROM arm64v8/busybox
+
+ADD arm-fs/ /
+
+VOLUME ["/data/log"]
+
+ENTRYPOINT ["/entrypoint.sh"]
+
+CMD ["frpc", "-c", "/etc/conf/rathole.toml"]
+

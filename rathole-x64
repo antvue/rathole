@@ -1,0 +1,10 @@
+FROM busybox:latest
+
+ADD fs/ /
+
+VOLUME ["/data/log"]
+
+ENTRYPOINT ["/entrypoint.sh"]
+
+CMD ["rathole", "-c", "/etc/conf/rathole.toml"]
+

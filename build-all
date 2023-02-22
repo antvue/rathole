@@ -1,0 +1,6 @@
+#!/bin/bash
+docker build -f rathole-x64 -t antvue/rathole .
+docker build -f rathole-arm -t antvue/rathole:arm .
+
+docker push antvue/rathole
+docker push antvue/rathole:arm
